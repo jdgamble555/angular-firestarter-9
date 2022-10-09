@@ -1,0 +1,17 @@
+<main>
+    <div *ngIf="this.user | async as user; else logged_out" class="logout">
+        <p>
+            Logged in as <strong>{{ user.email }}</strong>
+        </p>
+        <button mat-stroked-button (click)="afa.signOut()">Logout</button>
+    </div>
+    <ng-template #logged_out>
+        <h1>Login</h1>
+        <button mat-raised-button appGoogleSignin>
+            <img src="/assets/google-logo.svg" /> Login with Google
+        </button>
+        <p></p>
+        <h5>OR</h5>
+        <app-email-login></app-email-login>
+    </ng-template>
+</main>
