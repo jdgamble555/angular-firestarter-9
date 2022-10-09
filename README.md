@@ -1,5 +1,14 @@
 # Firestarter
 
+This is an updated version of [Firestarter](https://github.com/codediodeio/angular-firestarter) from the Fireship.io pro course. It uses Angular 14, Firebase 9, has a few bug fixes, and the items can be transfered now between boards.
+
+Hope this helps someone,
+
+J
+
+https://code.build/
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.5.
 
 ## Development server
