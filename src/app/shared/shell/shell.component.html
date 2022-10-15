@@ -29,7 +29,17 @@
       <div *ngIf="!(isHandset$ | async)">
         <a mat-button routerLink="/kanban">🍱 Kanban Demo</a>
         <a mat-button routerLink="/customers">⚡ SSR Demo</a>
-        <a mat-button routerLink="/login">🔑 Login</a>
+
+
+        <a mat-button routerLink="/login" *ngIf="this.user | async as user; else loggedOut">
+          <img class="avatar" [src]="user.photoURL || 'assets/default-user.svg'">
+          Profile
+        </a>
+        <ng-template #loggedOut>
+          <a mat-button routerLink="/login">🔑 Login</a>
+        </ng-template>
+
+
       </div>
 
       <!-- DROPDOWN MENU -->
