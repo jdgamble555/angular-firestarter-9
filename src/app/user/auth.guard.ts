@@ -16,7 +16,6 @@ export class AuthGuard implements CanActivate {
   async canActivate(): Promise<boolean> {
 
     const user = await firstValueFrom(authState(this.afa));
-    console.log(user);
     const isLoggedIn = !!user;
     if (!isLoggedIn) {
       this.snack.authError();
