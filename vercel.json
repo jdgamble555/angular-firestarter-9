@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "public": true,
+  "name": "angular-firestarter9",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/api" }
+  ],
+  "functions": {
+    "api/index.ts": {
+      "includeFiles": "dist/angular-firestarter9/browser/**"
+    }
+  }
+}

@@ -4,13 +4,14 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build-dev": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "dev:ssr": "ng run firestarter:serve-ssr",
     "serve:ssr": "node dist/firestarter/server/main.js",
     "build:ssr": "ng build && ng run firestarter:server",
-    "prerender": "ng run firestarter:prerender"
+    "prerender": "ng run firestarter:prerender",
+    "vercel-build": "npm run build:ssr"
   },
   "private": true,
   "dependencies": {
@@ -40,7 +41,7 @@
     "@nguniversal/builders": "^14.2.0",
     "@types/express": "^4.17.0",
     "@types/jasmine": "~4.0.0",
-    "@types/node": "^14.15.0",
+    "@types/node": "^14.18.32",
     "jasmine-core": "~4.3.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",
