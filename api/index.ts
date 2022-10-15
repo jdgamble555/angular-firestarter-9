@@ -1,2 +1,2 @@
-const server = require('../dist/angular-firestarter9/server/main');
+const server = require('../dist/firestarter/server/main');
 module.exports = server.app();
